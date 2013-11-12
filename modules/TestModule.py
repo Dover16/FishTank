@@ -38,7 +38,7 @@ def moduleInit(am, gm, se, sam, lg, rc, errs):
     registerSMSCommand = rc
     #Do not modify above#
     
-    log(moduleName(), "Test init completed")
+    log(moduleName(), "")
     registerSMSCommand("yum", eatPie)
 
 #Run the module, usually a loop  
@@ -53,7 +53,7 @@ def moduleRun(am, gm, se, sam, lg, rc, errs):
     registerSMSCommand = rc
     #Do not modify above#
     
-    log(moduleName(), "Test run started")
+    log(moduleName(), "Temp Module")
     
     #Add your main loop code below
     while True:
@@ -61,11 +61,11 @@ def moduleRun(am, gm, se, sam, lg, rc, errs):
     
 #Returns the author of the module    
 def moduleAuthor():
-    return "John Smith"
+    return "Ryan Sousa"
     
 #Returns the name of the module    
 def moduleName():
-    return "TestModule"
+    return "Temp"
     
 #Returns the module verison
 def moduleVersion():
@@ -73,7 +73,7 @@ def moduleVersion():
 
 #Returns a descripton of the module    
 def moduleDescription():
-    return "A test module"
+    return "temp module"
 
 #Called when the module is stopped
 def stopModule(log):
