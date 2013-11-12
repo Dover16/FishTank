@@ -38,7 +38,7 @@ def moduleInit(am, gm, se, sam, lg, rc, errs):
     registerSMSCommand = rc
     #Do not modify above#
     
-    log(moduleName(), "")
+    log(moduleName(), "Test Module Completed")
     registerSMSCommand("yum", eatPie)
 
 #Run the module, usually a loop  
