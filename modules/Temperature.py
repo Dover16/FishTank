@@ -57,7 +57,19 @@ def moduleRun(am, gm, se, sam, lg, rc, errs):
     
     #Add your main loop code below
     while True:
-        pass
+        i = 0
+        while i < incomingQueue.qsize():
+            temp = incomingQueue.get()
+            log(moduleName(), "Temperature is: " + temp)
+            incomingQueue.task_done()
+            
+        sendArduinomessage(moduleName(),"temprequest")
+        
+        if temp < '79.00':
+        sendArduinomessage(moduleName(), "heaton")
+        
+        elif temp > '81.00':
+        sendArduinomessage(moduleName(), "heatoff")
     
 #Returns the author of the module    
 def moduleAuthor():
@@ -65,7 +77,7 @@ def moduleAuthor():
     
 #Returns the name of the module    
 def moduleName():
-    return "Temp"
+    return "temperature"
     
 #Returns the module verison
 def moduleVersion():
